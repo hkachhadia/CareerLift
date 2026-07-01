@@ -1,6 +1,6 @@
 // React is imported globally by Vite
 import { motion } from 'framer-motion';
-import { Code, Mail, Sparkles, ArrowLeft, User } from 'lucide-react';
+import { Code, Mail, Sparkles, ArrowLeft } from 'lucide-react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -46,20 +46,6 @@ export default function AuthPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <button 
-              onClick={() => {
-                localStorage.setItem('careerlift_token', 'guest_token');
-                navigate('/dashboard');
-              }}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition-colors shadow-[0_0_20px_-5px_rgba(99,102,241,0.4)]"
-            >
-              <User className="w-5 h-5" />
-              Continue as Guest (Seamless)
-            </button>
-            <div className="relative my-2">
-              <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-white/10"></div></div>
-              <div className="relative flex justify-center text-xs"><span className="bg-slate-900/50 px-2 text-slate-400">Or use OAuth</span></div>
-            </div>
             <a href={`${API_URL}/auth/github`} className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-colors shadow-sm">
               <Code className="w-5 h-5" />
               Continue with GitHub

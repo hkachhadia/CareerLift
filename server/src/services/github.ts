@@ -10,13 +10,13 @@ export const fetchGitHubData = async (username: string) => {
 
     const userResponse = await fetch(`https://api.github.com/users/${username}`, { headers });
     if (!userResponse.ok) throw new Error('GitHub User not found');
-    const userData = await userResponse.json();
+    const userData: any = await userResponse.json();
 
     const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, { headers });
-    const reposData = await reposResponse.json();
+    const reposData: any[] = (await reposResponse.json()) as any[];
 
     let totalStars = 0;
-    let languages = new Set<string>();
+    const languages = new Set<string>();
 
     reposData.forEach((repo: any) => {
       totalStars += repo.stargazers_count;
