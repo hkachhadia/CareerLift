@@ -1,6 +1,6 @@
-import React from 'react';
+// React is imported globally by Vite
 import { motion } from 'framer-motion';
-import { Github, Mail, Sparkles, ArrowLeft } from 'lucide-react';
+import { Code, Mail, Sparkles, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AuthPage() {
@@ -34,7 +34,7 @@ export default function AuthPage() {
 
           <div className="flex flex-col gap-4">
             <Link to="/dashboard" className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-colors shadow-sm">
-              <Github className="w-5 h-5" />
+              <Code className="w-5 h-5" />
               Continue with GitHub (Demo bypass)
             </Link>
             <Link to="/dashboard" className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-slate-800 text-white font-semibold hover:bg-slate-700 transition-colors border border-white/5">

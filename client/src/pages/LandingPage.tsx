@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code, FileText, Github, Sparkles } from 'lucide-react';
+import { ArrowRight, Code, FileText, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
@@ -69,7 +69,7 @@ export default function LandingPage() {
               description="Extract deep insights from your resume. Get your ATS score, discover missing keywords, and receive formatting suggestions instantly."
             />
             <FeatureCard 
-              icon={<Github className="w-6 h-6 text-purple-400" />}
+              icon={<Code className="w-6 h-6 text-purple-400" />}
               title="GitHub Deep Dive"
               description="We analyze your repositories, commit history, and code complexity to generate a comprehensive developer health score."
             />

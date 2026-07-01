@@ -1,4 +1,4 @@
-import React from 'react';
+// React is imported globally by Vite
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';

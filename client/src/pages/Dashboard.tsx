@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Upload, Github, Briefcase, ChevronRight, Activity, Zap, CheckCircle2 } from 'lucide-react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import { Upload, Code, Briefcase, ChevronRight, Activity, Zap, CheckCircle2 } from 'lucide-react';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -95,7 +95,7 @@ export default function Dashboard() {
             <div>
               <label className="block text-sm font-medium mb-2 text-slate-300">GitHub Username (Optional)</label>
               <div className="relative">
-                <Github className="absolute left-4 top-3.5 w-5 h-5 text-slate-500" />
+                <Code className="absolute left-4 top-3.5 w-5 h-5 text-slate-500" />
                 <input 
                   type="text" 
                   placeholder="octocat" 
