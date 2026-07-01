@@ -4,6 +4,8 @@ import { Code, Mail, Sparkles, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AuthPage() {
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50 font-sans flex items-center justify-center relative overflow-hidden">
       
@@ -33,14 +35,14 @@ export default function AuthPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <Link to="/dashboard" className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-colors shadow-sm">
+            <a href={`${API_URL}/auth/github`} className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-colors shadow-sm">
               <Code className="w-5 h-5" />
-              Continue with GitHub (Demo bypass)
-            </Link>
-            <Link to="/dashboard" className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-slate-800 text-white font-semibold hover:bg-slate-700 transition-colors border border-white/5">
+              Continue with GitHub
+            </a>
+            <a href={`${API_URL}/auth/google`} className="w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-slate-800 text-white font-semibold hover:bg-slate-700 transition-colors border border-white/5">
               <Mail className="w-5 h-5" />
-              Continue with Google (Demo bypass)
-            </Link>
+              Continue with Google
+            </a>
           </div>
 
           <div className="mt-8 pt-6 border-t border-white/5 text-center">
